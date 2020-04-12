@@ -1,5 +1,6 @@
 const express = require('express');
 
+const UserController = require('../controllers/UserController');
 const TaskController = require('../controllers/TaskController');
 const AuthController = require('../controllers/AuthController');
 
@@ -12,6 +13,8 @@ const authRouter = express.Router();
 router.post('/register', AuthController.register);
 router.post('/auth', AuthController.auth);
 router.post('/logout', AuthController.logout);
+
+router.get('/user/authorized', UserController.isAuthorized);
 
 router.use(authRouter);
 
