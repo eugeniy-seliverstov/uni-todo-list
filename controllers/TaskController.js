@@ -20,7 +20,7 @@ class TaskController {
         try {
             const { affectedRows, insertId } = await TaskDao.insert(req.body.text, req.session.userId);
             if (!affectedRows) {
-                return res.status(400).json({ error: 'Задача не создана!' });
+                return res.status(400).json({ error: 'Не удалось создать задачу, обновите страницу и попробуйте ещё раз!' });
             }
             res.json({ success: true, id: insertId });
         } catch (error) {
@@ -38,7 +38,7 @@ class TaskController {
         try {
             const result = await TaskDao.update(text, isDone, id, user.id);
             if (!result.affectedRows) {
-                return res.status(400).json({ error: 'Задача не обновлена!' });
+                return res.status(400).json({ error: 'Не удалось изменить задачу, обновите страницу и попробуйте ещё раз!' });
             }
             res.json({ success: true });
         } catch (error) {
