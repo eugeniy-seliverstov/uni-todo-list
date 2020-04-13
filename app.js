@@ -6,7 +6,9 @@ const bodyParser = require('body-parser');
 const helmet = require('helmet');
 const cors = require('cors');
 const { port, devmode, session, cors: { origin } } = require('./config');
+
 const api = require('./routes/api');
+
 const errorHandler = require('./core/errorHandler');
 
 const app = express();

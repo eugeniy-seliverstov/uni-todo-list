@@ -1,5 +1,7 @@
 const express = require('express');
 
+const paramsHandlers = require('../core/paramsHandlers');
+
 const UserController = require('../controllers/UserController');
 const TaskController = require('../controllers/TaskController');
 const AuthController = require('../controllers/AuthController');
@@ -20,6 +22,8 @@ router.use(authRouter);
 
 authRouter.use(isAuth);
 authRouter.use(getUser);
+
+authRouter.param('id', paramsHandlers.id);
 
 authRouter.get('/tasks', TaskController.get);
 authRouter.post('/tasks', TaskController.create);
