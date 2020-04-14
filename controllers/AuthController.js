@@ -63,6 +63,7 @@ class AuthController {
             }
             
             req.session.userId = user.id;
+            req.session.authDate = Date.now();
             
             return res.json({ success: true });
         } catch (error) {
