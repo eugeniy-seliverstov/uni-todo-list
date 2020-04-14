@@ -3,18 +3,33 @@ const db = require('../core/db');
 class UserDao {
 
     async getById(id) {
-        const [[user]] = await db.query('SELECT id, login, password FROM user WHERE id = ?', [id]);
-        return user;
+        try {
+            const [[user]] = await db.query('SELECT id, login, password FROM user WHERE id = ?', [id]);
+            return user;
+        } catch (error) {
+            console.error(error);
+            throw error;
+        }
     }
 
     async getByLogin(login) {
-        const [[user]] = await db.query('SELECT id, login, password FROM user WHERE login = ?', [login]);
-        return user;
+        try {
+            const [[user]] = await db.query('SELECT id, login, password FROM user WHERE login = ?', [login]);
+            return user;
+        } catch (error) {
+            console.error(error);
+            throw error;
+        }
     }
 
     async insert(login, passwordHash) {
-        const [result] = await db.query('INSERT INTO user (login, password) values (?, ?)', [login, passwordHash]);
-        return result;
+        try {
+            const [result] = await db.query('INSERT INTO user (login, password) values (?, ?)', [login, passwordHash]);
+            return result;
+        } catch (error) {
+            console.error(error);
+            throw error;
+        }
     }
 }
 
