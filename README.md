@@ -1,30 +1,9 @@
-# Todo List
+# Collaborative To-Do List
 
-## Исполнители
-- Ширинов Рустам (D9RS)
-- Селиверстов Евгений (evgeniy-seliverstov)
+> ⚠️ This repository is archived and no longer maintained.  
+> It was originally created as part of a university assignment.
 
-## Задача
-Мы реализуем Todo List с возможностями:
-- Регистрация пользователя
-- Авторизация пользователя
-- Добавление и удаление задач
-- Изменение текста задачи
-- Изменения статуса задачи
+## Description
 
-## Лабораторные работы
-- Интерфейс (Пользователя/Межмашинный)
-    - Селиверстов Е. В. (evgeniy-seliverstov) - Сдано 14.04.2020
-    - Ширинов Р.Р. (D9RS) - Сдано 14.04.2020
-- Валидация данных
-    - Селиверстов Е. В. (evgeniy-seliverstov) - Сдано 14.04.2020
-    - Ширинов Р.Р. (D9RS) - Сдано 14.04.2020
-- Работа с СУБД
-    - Селиверстов Е. В. (evgeniy-seliverstov) - Сдано 14.04.2020
-    - Ширинов Р.Р. (D9RS) - Сдано 14.04.2020
-- Демонстрация основного функционала
-    - Селиверстов Е. В. (evgeniy-seliverstov) - Сдано 14.04.2020
-    - Ширинов Р.Р. (D9RS) - Сдано 14.04.2020
-- Извлечение данных из сети (парсинг)
-    - Ширинов Р.Р. (D9RS) - Сдано 10.04.2020
-    - Селиверстов Е. В. (evgeniy-seliverstov) - Сдано 10.04.2020
+A simple collaborative to-do list web application.  
+Implements basic task creation, status tracking, and multi-user logic using plain **JavaScript** and browser storage.
